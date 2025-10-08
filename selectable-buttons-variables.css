@@ -1,0 +1,10 @@
+/* Stadium Script v1.0 */
+:root {
+    --stadium-selectable-buttons-background-color: var(--BODY-BACKGROUND-COLOR);
+    --stadium-selectable-buttons-gap: 0.6rem;
+
+    --stadium-selectable-button-border-color: var(--DARK-GREY);
+    --stadium-selectable-button-background-color: var(--BODY-BACKGROUND-COLOR);
+    --stadium-selectable-button-border-radius: 0.6rem;
+    --stadium-selectable-button-checkmark-show-time: 0.2s;
+}

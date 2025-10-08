@@ -1,0 +1,61 @@
+/* Stadium Script v1.0 */
+.stadium-selectable-buttons.stadium-selectable-buttons {
+    --tw-scale-x: 0.97;
+    --tw-scale-y: 0.97;
+    padding: 0.6rem;
+    background-color: var(--BODY-BACKGROUND-COLOR, var(--stadium-selectable-buttons-background-color, white));
+    > .error-border {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: var(--stadium-selectable-buttons-gap, 0.6rem);
+        .checkbox,
+        .checkbox-inline {
+            border: 1px solid var(--DARK-GREY, var(--stadium-selectable-button-border-color, #cccccc));
+            background-color: var(--BODY-BACKGROUND-COLOR, var(--stadium-selectable-button-background-color, white));
+            border-radius: var(--stadium-selectable-button-border-radius, 0.6rem);
+            input[type=checkbox] {
+	            transition: all var(--stadium-selectable-button-checkmark-show-time, 0.2s) ease-in-out;
+                height: 0;
+                width: 0;
+            }
+            input[type=checkbox]:checked {
+                right: 0.6rem;
+                top: 0.2rem;
+                height: 1rem;
+                width: 2rem;
+            }
+            input[type=checkbox]:not(:checked) {
+                border: 0;
+            }
+            input[type=checkbox] ~ label {
+                transition: padding-right var(--stadium-selectable-button-checkmark-show-time, 0.2s) ease-in-out, 
+                            background-size var(--stadium-selectable-button-checkmark-show-time, 0.2s) ease-in-out;
+                background-position: right center;
+                background-size: 0;
+                height: 100%;
+                width: 100%;
+                user-select: none;
+                padding: 0.6rem;
+                margin: 0;
+            }
+            input[type=checkbox]:checked ~ label {
+                padding-right: 3rem;
+                background-size: 2.2rem;
+            }
+            &:has(input[type=checkbox]:checked) {
+                border-color: var(--MAIN-THEME-COLOR);
+                box-shadow: var(--BOX-SHADOW-COLOR) 0px 3px 8px;
+            }
+        }
+         .checkbox-inline {
+            input[type=checkbox]:checked {
+                right: 0.8rem;
+                top: 0.8rem;
+            }
+        }
+    }
+}
+.stadium-selectable-buttons:has(.checkbox-inline) > .error-border {
+    flex-direction: row;
+}
