@@ -14,7 +14,7 @@ Some CSS that turns a `CheckBoxList` into a set of selectable buttons
 
 ## Page Setup
 1. Drag a `CheckBoxList` control to the page 
-2. Add a class called "stadium-checkbox-buttons" into the control classes property
+2. Add a class called "stadium-selectable-buttons" into the control classes property
 3. Use like any other `CheckBoxList`
 
 ## CSS
